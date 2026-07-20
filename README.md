@@ -2,7 +2,17 @@
   <img src="assets/banner.svg" alt="Awesome Precision Medicine Analyst Interview Q&A Banner" width="100%">
 </p>
 
+<!--
+SEO Meta Details:
+- Keywords: Precision Medicine Analyst, Genomics, Variant Interpretation, Bioinformatics, Pharmacogenomics, Clinical Trial Biomarkers, EHR Pipelines, Multi-Omics, Biostatistics, Real-World Evidence
+- Description: Complete guide & Q&A resource for Precision Medicine Analyst interview prep covering variant curation, clinical pipelines, genomics, biostatistics, and regulatory compliance.
+-->
+
 # 🧬 Awesome Precision Medicine Analyst Interview Q&A
+
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a><a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"/></a><a href="https://github.com/ishandutta2007/Awesome-Precision-Medicine-Analyst-Interview-QA/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Precision-Medicine-Analyst-Interview-QA.svg" alt="GitHub stars"/></a><a href="https://github.com/ishandutta2007/Awesome-Precision-Medicine-Analyst-Interview-QA/network"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Precision-Medicine-Analyst-Interview-QA.svg" alt="GitHub forks"/></a>
+</p>
 
 A comprehensive, community-curated collection of **200+ interview questions and answers** specifically tailored for **Precision Medicine Analyst** roles. 🚀 This repository is a preparation resource for candidates targeting positions at the intersection of genomics, clinical data science, bioinformatics, and personalized therapeutics. 🔬
 
