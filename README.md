@@ -1,6 +1,10 @@
-# Awesome Precision Medicine Analyst Interview Q&A
+<p align="center">
+  <img src="assets/banner.svg" alt="Awesome Precision Medicine Analyst Interview Q&A Banner" width="100%">
+</p>
 
-A comprehensive, community-curated collection of **200+ interview questions and answers** specifically tailored for **Precision Medicine Analyst** roles. This repository is a preparation resource for candidates targeting positions at the intersection of genomics, clinical data science, bioinformatics, and personalized therapeutics.
+# 🧬 Awesome Precision Medicine Analyst Interview Q&A
+
+A comprehensive, community-curated collection of **200+ interview questions and answers** specifically tailored for **Precision Medicine Analyst** roles. 🚀 This repository is a preparation resource for candidates targeting positions at the intersection of genomics, clinical data science, bioinformatics, and personalized therapeutics. 🔬
 
 ## 📌 Overview
 

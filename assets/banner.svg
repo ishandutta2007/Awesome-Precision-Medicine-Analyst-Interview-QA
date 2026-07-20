@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGradient" cx="50%" cy="50%" r="70%" fx="20%" fy="20%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="60%" stop-color="#020617" />
+      <stop offset="100%" stop-color="#000000" />
+    </radialGradient>
+
+    <!-- Text & Glow Gradients -->
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+
+    <linearGradient id="dnaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#c084fc" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#ec4899" stop-opacity="0.8" />
+    </linearGradient>
+
+    <linearGradient id="pulseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#34d399" />
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="slightGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .title {
+      font-family: 'Outfit', 'Inter', 'Segoe UI', system-ui, sans-serif;
+      font-weight: 800;
+      font-size: 46px;
+      fill: url(#textGrad);
+    }
+    .subtitle {
+      font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+      font-weight: 600;
+      font-size: 20px;
+      fill: #94a3b8;
+      letter-spacing: 4px;
+    }
+    .tagline {
+      font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+      font-weight: 400;
+      font-size: 15px;
+      fill: #64748b;
+    }
+    .pulse-line {
+      stroke-dasharray: 800;
+      stroke-dashoffset: 800;
+      animation: dash 5s linear infinite;
+    }
+    .node {
+      animation: pulse 3s ease-in-out infinite;
+    }
+    .node-delay-1 { animation-delay: 0.7s; }
+    .node-delay-2 { animation-delay: 1.4s; }
+    .node-delay-3 { animation-delay: 2.1s; }
+
+    @keyframes dash {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+    @keyframes pulse {
+      0%, 100% { r: 5px; opacity: 0.4; }
+      50% { r: 9px; opacity: 1; }
+    }
+    @keyframes dnaRotate {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+    .dna-strand {
+      animation: dnaRotate 6s ease-in-out infinite;
+    }
+  </style>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#bgGradient)" />
+
+  <!-- Decorative Grid Patterns -->
+  <g opacity="0.05">
+    <path d="M 0,50 L 1200,50 M 0,100 L 1200,100 M 0,150 L 1200,150 M 0,200 L 1200,200 M 0,250 L 1200,250 M 0,300 L 1200,300 M 0,350 L 1200,350" stroke="#38bdf8" stroke-width="1" />
+    <path d="M 100,0 L 100,400 M 200,0 L 200,400 M 300,0 L 300,400 M 400,0 L 400,400 M 500,0 L 500,400 M 600,0 L 600,400 M 700,0 L 700,400 M 800,0 L 800,400 M 900,0 L 900,400 M 1000,0 L 1000,400 M 1100,0 L 1100,400" stroke="#38bdf8" stroke-width="1" />
+  </g>
+
+  <!-- Glowing background light -->
+  <circle cx="150" cy="200" r="180" fill="#38bdf8" opacity="0.08" filter="blur(60px)" />
+  <circle cx="1050" cy="200" r="220" fill="#ec4899" opacity="0.08" filter="blur(70px)" />
+
+  <!-- Left Side: Interactive Biotech/Genomics Graphics -->
+  <g class="dna-strand" transform="translate(100, 40)">
+    <!-- DNA ladder rung lines & connection lines -->
+    <path d="M 60,60 L 160,60 M 70,110 L 150,110 M 80,160 L 140,160 M 90,210 L 130,210 M 80,260 L 140,260 M 70,310 L 150,310" stroke="url(#dnaGrad)" stroke-width="2" opacity="0.4" />
+
+    <!-- Wave 1 (Sine curve) -->
+    <path d="M 50,20 Q 90,80 110,160 T 170,300 T 210,340" fill="none" stroke="url(#textGrad)" stroke-width="4" filter="url(#slightGlow)" />
+    <!-- Wave 2 (Cosine curve) -->
+    <path d="M 170,20 Q 130,80 110,160 T 50,300 T 30,340" fill="none" stroke="#34d399" stroke-width="3" opacity="0.8" />
+
+    <!-- Node circles -->
+    <circle cx="50" cy="20" r="6" fill="#38bdf8" class="node" />
+    <circle cx="170" cy="20" r="6" fill="#34d399" class="node node-delay-1" />
+    <circle cx="90" cy="80" r="6" fill="#c084fc" class="node node-delay-2" />
+    <circle cx="130" cy="80" r="6" fill="#c084fc" class="node node-delay-3" />
+    <circle cx="110" cy="160" r="8" fill="#ec4899" class="node" filter="url(#slightGlow)" />
+    <circle cx="170" cy="300" r="6" fill="#34d399" class="node node-delay-2" />
+    <circle cx="50" cy="300" r="6" fill="#38bdf8" class="node node-delay-1" />
+  </g>
+
+  <!-- Right Side: Medical Pulse / EKG & Data Analytics Graphics -->
+  <g transform="translate(850, 40)">
+    <!-- EKG Grid Box -->
+    <rect x="0" y="50" width="260" height="220" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="2" />
+    <path d="M 10,160 L 60,160 L 75,100 L 90,220 L 105,150 L 120,170 L 135,160 L 190,160 L 205,110 L 220,210 L 235,160 L 250,160" fill="none" stroke="url(#pulseGrad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="pulse-line" filter="url(#slightGlow)" />
+
+    <!-- Analytics Dots / Scatter Plot overlay -->
+    <circle cx="50" cy="90" r="5" fill="#38bdf8" class="node node-delay-1" />
+    <circle cx="180" cy="220" r="4" fill="#ec4899" class="node node-delay-2" />
+    <circle cx="210" cy="70" r="6" fill="#34d399" class="node node-delay-3" />
+    <line x1="50" y1="90" x2="210" y2="70" stroke="#475569" stroke-width="1" stroke-dasharray="4" />
+  </g>
+
+  <!-- Center Text -->
+  <g transform="translate(600, 180)" text-anchor="middle">
+    <!-- Header Subtitle / Category -->
+    <text y="-60" class="subtitle">PRECISION MEDICINE ANALYST</text>
+    
+    <!-- Title -->
+    <text y="10" class="title" filter="url(#glow)">INTERVIEW Q&amp;A</text>
+    
+    <!-- Tagline / Info -->
+    <text y="70" class="tagline">200+ Curated Questions &amp; Answers for Clinical Genomics &amp; Bioinformaticians</text>
+    
+    <!-- Decorative pill badge -->
+    <g transform="translate(-100, 105)">
+      <rect width="200" height="30" rx="15" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <text x="100" y="19" font-family="'Inter', sans-serif" font-size="12" fill="#38bdf8" font-weight="bold" text-anchor="middle" letter-spacing="1">MIT LICENSE</text>
+    </g>
+  </g>
+</svg>
